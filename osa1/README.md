@@ -5,4 +5,4 @@ Tehdyt tehtävät
 *Kurssitiedot*
 
 - [x] 1.1
-- [] 1.2
+- [x] 1.2
