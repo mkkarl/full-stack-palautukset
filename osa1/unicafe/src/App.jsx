@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Title =(props) => {
+const Title = (props) => {
   return <h1>{props.name}</h1>
 }
 
@@ -31,12 +31,14 @@ const Statistics = props => {
 
   return (
     <table>
-      <StatisticLine text='good' value={props.goodClicks} />
-      <StatisticLine text='neutral' value={props.neutralClicks} />
-      <StatisticLine text='bad' value={props.badClicks} />
-      <StatisticLine text='all' value={sum} />
-      <StatisticLine text='average' value={average} />
-      <StatisticLine text='positive' value={positive + ' %'} />
+      <tbody>
+        <StatisticLine text='good' value={props.goodClicks} />
+        <StatisticLine text='neutral' value={props.neutralClicks} />
+        <StatisticLine text='bad' value={props.badClicks} />
+        <StatisticLine text='all' value={sum} />
+        <StatisticLine text='average' value={average} />
+        <StatisticLine text='positive' value={positive + ' %'} />
+      </tbody>
     </table>
   )
 }
@@ -65,7 +67,7 @@ const App = () => {
       <Button onClick={handleNeutralClick} text='neutral' />
       <Button onClick={handleBadClick} text='bad' />
       <Title name='statistics' />
-      <Statistics goodClicks={good} neutralClicks={neutral} badClicks={bad}/>
+      <Statistics goodClicks={good} neutralClicks={neutral} badClicks={bad} />
     </div>
   )
 }
