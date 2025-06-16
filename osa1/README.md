@@ -1,8 +1,8 @@
 # Osa 1
 
-Tehdyt tehtävät
+Osasta 1 on tehty seuraavat tehtävät:
 
-*Kurssitiedot*
+## Kurssitiedot
 
 - [x] 1.1
 - [x] 1.2
@@ -10,7 +10,9 @@ Tehdyt tehtävät
 - [x] 1.4
 - [x] 1.5
 
-*Unicafe*
+[tehtävien palautukset](kurssitiedot/)
+
+## Unicafe
 
 - [x] 1.6
 - [x] 1.7
@@ -19,7 +21,7 @@ Tehdyt tehtävät
 - [ ] 1.10
 - [ ] 1.11
 
-*Anekdootit*
+## Anekdootit
 
 - [ ] 1.12
 - [ ] 1.13
