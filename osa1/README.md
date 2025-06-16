@@ -1,5 +1,7 @@
 # Osa 1
 
+[Osan 1 materiaali ja tehtävät](https://fullstackopen.com/osa1)
+
 Osasta 1 on tehty seuraavat tehtävät:
 
 ## Kurssitiedot
@@ -20,6 +22,8 @@ Osasta 1 on tehty seuraavat tehtävät:
 - [ ] 1.9
 - [ ] 1.10
 - [ ] 1.11
+
+[tehtävien palautukset](unicafe/)
 
 ## Anekdootit
 

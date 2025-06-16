@@ -1,5 +1,7 @@
 # Osa 0
 
+[Osan 0 materiaali ja tehtävät](https://fullstackopen.com/osa0)
+
 Tehdyt tehtävät
 
 - [x] 0.1
