@@ -27,7 +27,7 @@ Osasta 1 on tehty seuraavat tehtävät:
 
 ## Anekdootit
 
-- [ ] 1.12*
+- [x] 1.12*
 - [ ] 1.13*
 - [ ] 1.14*
 
