@@ -19,7 +19,7 @@ Osasta 1 on tehty seuraavat tehtävät:
 - [x] 1.6
 - [x] 1.7
 - [x] 1.8
-- [ ] 1.9
+- [x] 1.9
 - [ ] 1.10
 - [ ] 1.11
 

@@ -10,14 +10,13 @@ const Button = ({ onClick, text }) => {
   )
 }
 
-const Display = (props) => {
-  return (
-    <p>{props.text} {props.clicks}</p>
-  )
-}
-
 const Statistics = props => {
   const sum = props.goodClicks + props.neutralClicks + props.badClicks
+
+  if (sum === 0) {
+    return <p>No feedback given</p>
+  }
+
   const average = (props.goodClicks - props.badClicks) / sum
   const positive = props.goodClicks / sum * 100
 
@@ -57,9 +56,6 @@ const App = () => {
       <Button onClick={handleNeutralClick} text='neutral' />
       <Button onClick={handleBadClick} text='bad' />
       <Title name='statistics' />
-      <Display text='good' clicks={good} />
-      <Display text='neutral' clicks={neutral} />
-      <Display text='bad' clicks={bad} />
       <Statistics goodClicks={good} neutralClicks={neutral} badClicks={bad}/>
     </div>
   )
