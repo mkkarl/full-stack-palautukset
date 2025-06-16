@@ -20,7 +20,7 @@ Osasta 1 on tehty seuraavat tehtävät:
 - [x] 1.7
 - [x] 1.8
 - [x] 1.9
-- [ ] 1.10
+- [x] 1.10
 - [ ] 1.11
 
 [tehtävien palautukset](unicafe/)
