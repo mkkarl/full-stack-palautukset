@@ -29,6 +29,6 @@ Osasta 1 on tehty seuraavat tehtävät:
 
 - [x] 1.12*
 - [x] 1.13*
-- [ ] 1.14*
+- [x] 1.14*
 
 [tehtävien palautukset](anekdootit/)
