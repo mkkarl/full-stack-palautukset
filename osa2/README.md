@@ -18,7 +18,7 @@ Osasta 2 on tehty seuraavat tehtävät:
 
 - [x] 2.6
 - [x] 2.7
-- [ ] 2.8
+- [x] 2.8
 - [ ] 2.9*
 - [ ] 2.10
 
