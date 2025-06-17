@@ -6,5 +6,6 @@ Kurssin nettisivu löytyy osoitteesta [fullstackopen.com](https://fullstackopen.
 
 ## Osien palautuskansiot
 
-- [osa0](osa0/)
-- [osa1](osa1/)
+- [osa 0](osa0/)
+- [osa 1](osa1/)
+- [osa 2](osa2/)
