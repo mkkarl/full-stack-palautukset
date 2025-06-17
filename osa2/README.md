@@ -10,6 +10,6 @@ Osasta 2 on tehty seuraavat tehtävät:
 - [x] 2.2
 - [x] 2.3
 - [x] 2.4
-- [ ] 2.5
+- [x] 2.5
 
 [tehtävien palautukset](kurssitiedot/)
