@@ -6,7 +6,7 @@ Osasta 2 on tehty seuraavat tehtävät:
 
 ## Kurssitiedot
 
-- [ ] 2.1
+- [x] 2.1
 - [ ] 2.2
 - [ ] 2.3
 - [ ] 2.4
