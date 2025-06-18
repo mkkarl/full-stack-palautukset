@@ -20,6 +20,6 @@ Osasta 2 on tehty seuraavat tehtävät:
 - [x] 2.7
 - [x] 2.8
 - [x] 2.9*
-- [ ] 2.10
+- [x] 2.10
 
 [tehtävien palautukset](puhelinluettelo/)
