@@ -22,5 +22,17 @@ Osasta 2 on tehty seuraavat tehtävät:
 - [x] 2.9*
 - [x] 2.10
 - [x] 2.11
+- [x] 2.12
+- [ ] 2.13
+- [ ] 2.14
+- [ ] 2.15*
+- [ ] 2.16
+- [ ] 2.17*
 
 [tehtävien palautukset](puhelinluettelo/)
+
+## Maiden tiedot
+
+- [ ] 2.18*
+- [ ] 2.19*
+- [ ] 2.20*
