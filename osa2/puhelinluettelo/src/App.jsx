@@ -1,10 +1,22 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import personService from './services/persons'
 
-const Person = ({ person }) => {
+const Button = (props) => {
   return (
-    <p>{person.name} {person.number}</p>
+    <button onClick={props.handleClick}>{props.label}</button>
+  )
+}
+
+const Person = ({ person, removePerson }) => {
+  const handleClick = () => {
+    console.log('Click! id:', person.id)
+    if (confirm(`Delete ${person.name}?`)) {
+      removePerson(person.id)
+    }
+  }
+
+  return (
+    <p>{person.name} {person.number} <Button handleClick={handleClick} label='delete' /></p>
   )
 }
 
@@ -36,7 +48,7 @@ const PersonList = (props) => {
   return (
     <div>
       {props.personsToShow.map(person =>
-        <Person key={person.name} person={person} />
+        <Person key={person.name} person={person} removePerson={props.removePerson} />
       )}
     </div>
   )
@@ -77,8 +89,29 @@ const App = () => {
           setNewNumber('')
         })
     }
+  }
 
-
+  const removePerson = (id) => {
+    personService
+      .remove(id)
+      .then(removedPerson => {
+        console.log(removedPerson)
+        personService
+          .getAll()
+          .then(initialPersons => {
+            setPersons(initialPersons)
+          })
+      })
+      .catch(error => {
+        alert(
+          `Person (id: ${id}) has already been deleted from server.`
+        )
+        personService
+          .getAll()
+          .then(initialPersons => {
+            setPersons(initialPersons)
+          })
+      })
   }
 
   const handleNameChange = (event) => {
@@ -108,7 +141,10 @@ const App = () => {
         handleNumberChange={handleNumberChange}
       />
       <h2>Numbers</h2>
-      <PersonList personsToShow={personsToShow} />
+      <PersonList
+        personsToShow={personsToShow}
+        removePerson={removePerson}
+      />
     </div>
   )
 
