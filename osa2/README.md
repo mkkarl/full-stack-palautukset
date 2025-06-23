@@ -26,7 +26,7 @@ Osasta 2 on tehty seuraavat tehtävät:
 - [x] 2.13
 - [x] 2.14
 - [x] 2.15*
-- [ ] 2.16
+- [x] 2.16
 - [ ] 2.17*
 
 [tehtävien palautukset](puhelinluettelo/)
