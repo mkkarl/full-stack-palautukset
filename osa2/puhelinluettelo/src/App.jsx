@@ -9,9 +9,8 @@ const Button = (props) => {
 
 const Person = ({ person, removePerson }) => {
   const handleClick = () => {
-    console.log('Click! id:', person.id)
     if (confirm(`Delete ${person.name}?`)) {
-      removePerson(person.id)
+      removePerson(person)
     }
   }
 
@@ -54,13 +53,25 @@ const PersonList = (props) => {
   )
 }
 
-const Notification = ({ message }) => {
+const SuccesNotification = ({ message }) => {
   if (message === null) {
     return null
   }
 
   return (
     <div className='succes'>
+      {message}
+    </div>
+  )
+}
+
+const ErrorNotification = ({ message }) => {
+  if (message === null) {
+    return null
+  }
+
+  return (
+    <div className='error'>
       {message}
     </div>
   )
@@ -74,6 +85,7 @@ const App = () => {
   const [newFilter, setNewFilter] = useState('')
 
   const [succesMessage, setSuccesMessage] = useState(null)
+  const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
     personService
@@ -95,7 +107,6 @@ const App = () => {
     if (t.includes(newName)) {
       if (confirm(`${newName} is already added to the phonebook. Replace the old number with the new number?`)) {
         const i = t.indexOf(newName)
-        console.log(persons[i])
         updatePerson(persons[i].id, personObject)
       }
     } else {
@@ -118,7 +129,6 @@ const App = () => {
     personService
       .update(id, personObject)
       .then(updatedPerson => {
-        console.log(updatedPerson)
         personService
           .getAll()
           .then(initialPersons => {
@@ -134,11 +144,10 @@ const App = () => {
       })
   }
 
-  const removePerson = (id) => {
+  const removePerson = (person) => {
     personService
-      .remove(id)
+      .remove(person.id)
       .then(removedPerson => {
-        console.log(removedPerson)
         personService
           .getAll()
           .then(initialPersons => {
@@ -150,14 +159,18 @@ const App = () => {
         }, 5000)
       })
       .catch(error => {
-        alert(
-          `Person (id: ${id}) has already been deleted from server.`
-        )
+        console.log(`${person.name} has already been deleted from server.`)
+
         personService
           .getAll()
           .then(initialPersons => {
             setPersons(initialPersons)
           })
+
+        setErrorMessage(`${person.name} has already been deleted from server.`)
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
       })
   }
 
@@ -178,7 +191,8 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      <Notification message={succesMessage} />
+      <SuccesNotification message={succesMessage} />
+      <ErrorNotification message={errorMessage} />
       <Filter newFilter={newFilter} handleFilterChange={handleFilterChange} />
       <h2>add a new</h2>
       <PersonForm
