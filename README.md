@@ -9,3 +9,4 @@ Kurssin nettisivu löytyy osoitteesta [fullstackopen.com](https://fullstackopen.
 - [osa 0](osa0/)
 - [osa 1](osa1/)
 - [osa 2](osa2/)
+- [osa 3](osa3/)
