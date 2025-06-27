@@ -8,7 +8,7 @@ Osasta 3 on tehty seuraavat tehtävät:
 
 - [x] 3.1
 - [x] 3.2
-- [ ] 3.3
+- [x] 3.3
 - [ ] 3.4
 - [ ] 3.5
 - [ ] 3.6
