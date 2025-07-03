@@ -21,6 +21,11 @@ let persons = [
         "name": "Mary Poppendieck",
         "number": "39-23-6423122",
         "id": "4"
+    },
+    {
+        "name": "Testi Testaaja",
+        "number": "123-456789",
+        "id": "5"
     }
 ]
 
@@ -41,6 +46,13 @@ app.get('/api/persons/:id', (request, response) => {
     } else {
         response.status(404).end()
     }
+})
+
+app.delete('/api/persons/:id', (request, response) => {
+    const id = request.params.id
+    persons = persons.filter(person => person.id !== id)
+
+    response.status(204).end()
 })
 
 app.get('/info', (request, response) => {
