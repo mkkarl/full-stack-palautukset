@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+app.use(express.json())
+
 let persons = [
     {
         "name": "Arto Hellas",
@@ -35,6 +37,20 @@ app.get('/', (request, response) => {
 
 app.get('/api/persons', (request, response) => {
     response.json(persons)
+})
+
+app.post('/api/persons', (request, response) => {
+    const maxId = persons.length > 0
+        ? Math.max(...persons.map(p => Number(p.id)))
+        : 0
+
+    const person = request.body
+    person.id = String(maxId + 1)
+    console.log(person)
+
+    persons = persons.concat(person)
+    
+    response.json(person)
 })
 
 app.get('/api/persons/:id', (request, response) => {
