@@ -11,7 +11,7 @@ Osasta 3 on tehty seuraavat tehtävät:
 - [x] 3.3
 - [x] 3.4
 - [x] 3.5
-- [ ] 3.6
+- [x] 3.6
 - [ ] 3.7
 - [ ] 3.8*
 - [ ] 3.9

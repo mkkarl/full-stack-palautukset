@@ -39,17 +39,34 @@ app.get('/api/persons', (request, response) => {
     response.json(persons)
 })
 
-app.post('/api/persons', (request, response) => {
+const generateId = () => {
     const maxId = persons.length > 0
         ? Math.max(...persons.map(p => Number(p.id)))
         : 0
+    return String(maxId + 1)
+}
 
+app.post('/api/persons', (request, response) => {
     const person = request.body
-    person.id = String(maxId + 1)
+
+    if (!person.name || !person.number) {
+        return response.status(400).json({
+            error: 'name or number missing'
+        })
+    }
+
+    const t = persons.map(p => p.name)
+    if (t.includes(person.name)) {
+        return response.status(400).json({
+            error: 'name already exists'
+        })
+    }
+
+    person.id = generateId()
     console.log(person)
 
     persons = persons.concat(person)
-    
+
     response.json(person)
 })
 

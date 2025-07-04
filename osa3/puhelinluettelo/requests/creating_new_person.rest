@@ -5,3 +5,30 @@ Content-Type: application/json
     "name": "Maija Meikäläinen",
     "number": "012-9876543"
 }
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+    "number": "321-6549870"
+}
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+    "name": "Matti Meikäläinen"
+}
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{}
+
+###
