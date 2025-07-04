@@ -4,7 +4,7 @@ const app = express()
 
 morgan.token('postreq', (req, res) => {
     if (req.method == 'POST') {
-        return JSON.stringify(req.toArray)
+        return JSON.stringify(req.body)
     }
     return ''
 })
@@ -57,7 +57,6 @@ const generateId = () => {
 
 app.post('/api/persons', (request, response) => {
     const person = request.body
-    console.log(JSON.stringify(person))
 
     if (!person.name || !person.number) {
         return response.status(400).json({
