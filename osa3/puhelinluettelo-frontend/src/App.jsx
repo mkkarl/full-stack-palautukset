@@ -153,7 +153,7 @@ const App = () => {
           .then(initialPersons => {
             setPersons(initialPersons)
           })
-        setSuccesMessage(`Deleted ${removedPerson.name}`)
+        setSuccesMessage(`Deleted ${person.name}`)
         setTimeout(() => {
           setSuccesMessage(null)
         }, 5000)

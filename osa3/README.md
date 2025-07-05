@@ -29,5 +29,8 @@ Osasta 3 on tehty seuraavat tehtävät:
 - [ ] 3.21
 - [ ] 3.22
 
-[tehtävien palautukset](puhelinluettelo/)
+tehtävien palautukset
+
+- [backend](puhelinluettelo-backend/)
+- [frontend](puhelinluettelo-frontend)
 
