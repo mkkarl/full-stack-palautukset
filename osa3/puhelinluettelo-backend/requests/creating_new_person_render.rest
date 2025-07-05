@@ -1,0 +1,34 @@
+POST https://puhelinluettelo-qccw.onrender.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Maija Meikäläinen",
+    "number": "012-9876543"
+}
+
+###
+
+POST https://puhelinluettelo-qccw.onrender.com/api/persons
+Content-Type: application/json
+
+{
+    "number": "321-6549870"
+}
+
+###
+
+POST https://puhelinluettelo-qccw.onrender.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Matti Meikäläinen"
+}
+
+###
+
+POST https://puhelinluettelo-qccw.onrender.com/api/persons
+Content-Type: application/json
+
+{}
+
+###

@@ -1,0 +1,1 @@
+DELETE https://puhelinluettelo-qccw.onrender.com/api/persons/5

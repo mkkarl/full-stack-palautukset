@@ -15,7 +15,7 @@ Osasta 3 on tehty seuraavat tehtävät:
 - [x] 3.7
 - [x] 3.8*
 - [x] 3.9
-- [ ] 3.10
+- [x] 3.10
 - [ ] 3.11
 - [ ] 3.12
 - [ ] 3.13
@@ -33,4 +33,5 @@ tehtävien palautukset
 
 - [backend](puhelinluettelo-backend/)
 - [frontend](puhelinluettelo-frontend)
+- [nettisivu](https://puhelinluettelo-qccw.onrender.com/api/persons)
 
