@@ -1,6 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
+const Person = require('./models/person')
 
 morgan.token('postreq', (req, res) => {
     if (req.method == 'POST') {
@@ -46,7 +47,9 @@ app.get('/', (request, response) => {
 })
 
 app.get('/api/persons', (request, response) => {
-    response.json(persons)
+    Person.find({}).then(persons => {
+        response.json(persons)
+    })
 })
 
 const generateId = () => {
