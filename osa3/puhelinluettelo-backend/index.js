@@ -99,13 +99,22 @@ app.get('/api/persons/:id', (request, response, next) => {
                 response.status(404).end()
             }
         })
-        .catch (error => next(error))
+        .catch(error => next(error))
 })
 
 app.delete('/api/persons/:id', (request, response) => {
     Person.findByIdAndDelete(request.params.id)
         .then(result => {
             response.status(204).end()
+        })
+        .catch(error => next(error))
+})
+
+app.put('/api/persons/:id', (request, response, next) => {
+    body = request.body
+    Person.findByIdAndUpdate(request.params.id, body)
+        .then(person => {
+            response.json(person)
         })
         .catch(error => next(error))
 })
